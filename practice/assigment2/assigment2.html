@@ -36,10 +36,10 @@
             let heightinputfeet = document.getElementById("heightinputfeet").value;
             let heightinputinch = document.querySelector("#heightinputinch").value;
 
-            let weightInputkg = document.querySelector("#weightinputkg").value;
+            let weightInputkg = document.querySelector("#weightinput").value;
 
-            heightInputfeet = parseInt(heightinputfeet);
-            heightInputinch = parseInt(heightinputinch);
+            heightinputfeet = parseInt(heightinputfeet);
+            heightinputinch = parseInt(heightinputinch);
 
             heightinputinch += heightinputfeet * 12;
 
@@ -47,13 +47,13 @@
 
             let heightInMeterSq = heightInMeter * heightInMeter
 
-            let bodyMassIndex = weightInputKg / heightInMeterSq;
+            let bodyMassIndex = weightInputkg / heightInMeterSq;
 
             let idealWeight = 22 * heightInMeterSq; 
             let weightToLose = (weightInputkg - idealWeight).toFixed(2);
             let weightToGain = (idealWeight - weightInputkg).toFixed(2)
 
-            let title = "you are";
+            let suggestion = "you are";
 
             if(bodyMassIndex > 30){
                 suggestion += `Obese. you need to lose ${weightToLose}kg`;
@@ -75,6 +75,7 @@
             document.querySelector("#title").innerHTML = `Ideal weight: ${(idealWeight).toFixed(2 )}kg`;
             document.querySelector("#suggestion").innerHTML = suggestion;
              
+            console.log(suggestion)
         }
     </script>
 </body>
