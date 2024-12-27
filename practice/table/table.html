@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <button onclick="tablegenrate()">click me</button>
+
+<body class="body">
+    <h1>Table</h1>
+    <h3>Enter Table Number: <input type="number" id="number" min="0" placeholder="Enter a Number" required></h3>
+    <h3>Enter Range: <input type="number" id="range" min="0" placeholder="Enter a Range" required></h3>
+    <button onclick="generateTable(); return false;">Submit</button>
+
+
+    <div id="tablecontant"></div>
+
     <script src="table.mjs"></script>
+
 </body>
+
 </html>

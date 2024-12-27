@@ -22,11 +22,29 @@
 
 
 
-const tablegenrate = () => {
-    let num = prompt("enter a number");
-    let num2 = prompt("enter a second number");
-    for (let index = 1; index <=num2; index++) {
-        document.write(`${num} x ${index} = ${num * index}<br>`)
+// const tablegenrate = () => {
+//     let num = prompt("enter a number");
+//     let num2 = prompt("enter a second number");
+//     for (let index = 1; index <=num2; index++) {
+//         document.write(`${num} x ${index} = ${num * index}<br>`)
 
+//     }
+// }
+
+
+const generateTable = () => {
+    let number = document.querySelector("#number").value;
+    let range = document.querySelector("#range").value;
+    if (number && range) {
+        let tableContent = "";
+        for (let i = 1; i <= range; i++) {
+            tableContent += `${number} x ${i} = ${number * i}<br>`;
+        }
+        document.querySelector("#tablecontant").innerHTML = tableContent;
+    } else {
+        document.querySelector("#tablecontant").innerHTML = "Please enter valid numbers for both table number and range.";
     }
 }
+
+
+
